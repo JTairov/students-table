@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./app.js"></script>
+  <title>Students</title>
+</head>
+<body>
+  <div class="container">
+    <label>
+      Добавить студента
+      <form class="form" id="form">
+        <input type="text" id='form__input' placeholder="Фамилия">
+        <input type="text" id='form__input' placeholder="Имя">
+        <input type="text" id='form__input' placeholder="Отчество">
+        <input type="date" id='form__input' placeholder="Дата рождения (ДД.ММ.ГГГГ)">
+        <input type="text" id='form__input' placeholder="Год поступления">
+        <input type="text" id='form__input' placeholder="Факультет">
+        <button id="submit-btn" type="submit" class="form__btn">Добавить</button>
+      </form>
+    </label>
+    <div class="filters">
+      <h2 class="filters__heading">Фильтры</h2>
+      <form class="filters__form" id="filters">
+        <input type="text" class="filters__input" placeholder="ФИО" data-search="fullName">
+        <input type="text" class="filters__input" placeholder="Факультет" data-search="school">
+        <input type="text" class="filters__input" placeholder="Год потсупления" data-search="entered">
+        <input type="text" class="filters__input" placeholder="Год окончания" data-search="graduateYear">
+      </form>
+    </div>
+    <div>
+      <table class="table" id="table">
+        <thead>
+          <tr>
+            <th id="fullName">ФИО</th>
+            <th id="school">Факультет</th>
+            <th id="birthDate">Дата рождения</th>
+            <th id="entered">Поступил</th>
+          </tr>
+        </thead>
+        <tbody id="tBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
